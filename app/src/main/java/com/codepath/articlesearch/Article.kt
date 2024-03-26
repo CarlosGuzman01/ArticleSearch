@@ -39,6 +39,46 @@ data class Article(
     val mediaImageUrl = "https://www.nytimes.com/${multimedia?.firstOrNull { it.url != null }?.url ?: ""}"
 }
 
+@Keep
+@Serializable
+data class Headline(
+
+    @SerialName("main")
+    val main: String?
+
+) : java.io.Serializable{
+
+}
+
+@Keep
+@Serializable
+data class Byline(
+
+    @SerialName("original")
+    val original: String? = null
+
+): java.io.Serializable{
+
+}
+
+@Keep
+@Serializable
+data class MultiMedia(
+
+    @SerialName("url")
+    val url: String?
+
+): java.io.Serializable{
+
+}
+
+
+
+
+
+
+
+
 
 
 
